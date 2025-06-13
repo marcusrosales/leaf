@@ -6,13 +6,15 @@ function NavBar() {
     return(
         <>
             <nav>
-                <div className="flex">
+                <div className="flex" >
                 
                 
-                <h1 className="text-5xl navTexts border-4 text-center w-40 h-16" 
+                <h1 className="text-5xl navTexts border-3 text-center w-45 
+                italic font-serif font-semibold" 
                 >HOME</h1>
 
-                <h1 className="text-5xl navTexts border-4 text-center w-50 h-16"
+                <h1 className="text-5xl navTexts border-3 text-center w-59 
+                italic font-serif font-semibold"
                 >MARKET</h1>
                 
                 
