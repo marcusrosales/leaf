@@ -1,31 +1,14 @@
-
-
-
 function NavBar() {
-
-    return(
-        <>
-            <nav>
-                <div className="flex" >
-                
-                
-                <h1 className="text-5xl navTexts border-3 text-center w-45 
-                italic font-serif font-semibold" 
-                >HOME</h1>
-
-                <h1 className="text-5xl navTexts border-3 text-center w-59 
-                italic font-serif font-semibold"
-                >MARKET</h1>
-                
-                
-                </div>
-            </nav>
-
-
-        </>
-    )
+  return (
+    <nav>
+      <ul className="flex">
+        <li className="text-5xl navTexts border-3 text-center w-58 italic font-serif font-semibold">HOME</li>
+        <li className="text-5xl navTexts border-3 text-center w-58 italic font-serif font-semibold">SHELF</li>
+        <li className="text-5xl navTexts border-3 text-center w-58 italic font-serif font-semibold">MARKET</li>
+      </ul>
+    </nav>
+  );
 }
 
-
-
+gt
 export default NavBar;
