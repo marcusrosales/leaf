@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+
+body {
+  background-color: #f0ead2;
+}
+
+
+h1{
+  color: #ADC178;
+}
+
+h2{
+  color: #6C584C;
+}
+
+#breeze {
+}
