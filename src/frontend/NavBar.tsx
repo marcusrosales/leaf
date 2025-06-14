@@ -1,10 +1,20 @@
 function NavBar() {
+
   return (
     <nav>
       <ul className="flex">
-        <li className="text-5xl navTexts border-3 text-center w-58 italic font-serif font-semibold">HOME</li>
-        <li className="text-5xl navTexts border-3 text-center w-58 italic font-serif font-semibold">SHELF</li>
-        <li className="text-5xl navTexts border-3 text-center w-58 italic font-serif font-semibold">MARKET</li>
+        
+        <button className="text-5xl navTexts border-3 text-center w-58 italic font-serif font-semibold"
+                onClick={()=>console.log('test HOME button')}>HOME</button>
+
+        <button className="text-5xl navTexts border-3 text-center w-58 italic font-serif font-semibold"
+                onClick={()=>console.log('test SHELF button')}
+                >SHELF</button>
+
+        <button className="text-5xl navTexts border-3 text-center w-58 italic font-serif font-semibold"
+                onClick={()=>console.log('test market button')}
+                >MARKET</button>
+
       </ul>
     </nav>
   );
