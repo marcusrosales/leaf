@@ -5,6 +5,10 @@ body {
   background-color: #fff9e1;
 }
 
+navBadCustoms {
+  border-color: red;
+}
+
 
 h1{
   color: #ADC178;
