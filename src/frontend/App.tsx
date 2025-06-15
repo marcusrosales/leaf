@@ -17,7 +17,7 @@ function App() {
       <h2 className="text-6xl/normal italic font-serif font-semibold
       text-shadow-lg/100 text-shadow-lime-900
       -ml-30 mt-15"
-      ><span id="breeze">breeze </span>through the classics</h2>
+      >make the next one a <span id="breeze">breeze</span></h2>
     </div>
 
     </>
