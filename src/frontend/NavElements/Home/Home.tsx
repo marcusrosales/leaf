@@ -25,8 +25,7 @@ function Home() {
       
       <img src="src/frontend/assets/wind-svgrepo-com.svg" className="size-27 ml-5 -mt-2" ></img>
       </div>
-
-      
+ 
 
     </div>
 
