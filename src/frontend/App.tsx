@@ -4,11 +4,11 @@ import NavBar from "./NavBar";
 
 function App() {
 
-  return (
+  return (  
 
     <>
       <NavBar />
-    <div className="flex gap-50">
+      <div className="flex gap-50">
       <h1 className=" text-9xl/normal italic font-serif font-extrabold
       text-shadow-lg/100  text-shadow-green-900
       ml-5" >leaf</h1>
