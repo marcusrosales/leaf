@@ -2,25 +2,24 @@
 
 
 body {
-  background-color: #fff9e1;
+  background-color: #fffefc;
 }
 
-navBadCustoms {
-  border-color: red;
+.navBadCustoms {
+  border-color: #5d784b;
+  background-color: #b4c9a6;
 }
 
 
 h1{
-  color: #ADC178;
+  color: #cbe388;
 }
 
 h2{
-  color: #A98467;
+  color: #5b7045;
+
 }
 
 .navTexts{
-  color: #779761;
-}
-
-/*#breeze {
+  color: #d9f883;
 }

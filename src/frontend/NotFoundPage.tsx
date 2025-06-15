@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import NavBar from "./NavBar";
 
+
 function NotFoundPage(){
     return(
         <>
