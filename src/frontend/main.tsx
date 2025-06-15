@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 
 
 
-import Home from './Home.tsx'
+import Home from './Home/Home.tsx'
 import Shelf from './Shelf.tsx'
 import Market from './Market.tsx'
 
