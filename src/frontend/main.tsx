@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 
 
 
-import App from './App.tsx'
+import Home from './Home.tsx'
 import Shelf from './Shelf.tsx'
 import Market from './Market.tsx'
 
@@ -14,7 +14,7 @@ import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 
 const router = createBrowserRouter([
-  {path:'/',element:<App />},
+  {path:'/',element:<Home />},
   {path:'/shelf',element:<Shelf />},
   {path:'/market',element:<Market />},
   {path:'*',element:<NotFoundPage />},
