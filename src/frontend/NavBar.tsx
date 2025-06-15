@@ -13,7 +13,7 @@ function NavBar() {
       <ul className="flex justify-center gap-50">
 
 
-        <Link to={'/Shelf'}>
+        <Link to={'/'}>
           <div className="flex justify-center">
         
         <img src="src/frontend/assets/Home.svg" className="size-13 -mr-3 "></img>
