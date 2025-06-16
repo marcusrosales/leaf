@@ -1,18 +1,14 @@
-
-
-
 function BookPlate(){
     
-    let b1 = null
-    let b2 = null 
-    let b3 = null
-    
-   
+    let b1 = 'src/frontend/assets/Test Pictures/dog1.jpg'
+    //let b2 = 'src/frontend/assets/Test Pictures/dog2.jpg'
+    //let b3 = 'src/frontend/assets/Test Pictures/dog3.png'
+  
     return(
    
     <>
-    
-    <img></img>
+
+    <img src={b1} className="w-90 h-140 border-4 rounded-2xl shadow-lg/100"></img>
     
     </>)
 }
@@ -20,15 +16,9 @@ function BookPlate(){
 
 function VerticalSlider(){
         
-    
-    
- 
     return(
         <>
             <BookPlate />
-        
-        
-        
         </>
     )
 }
