@@ -8,7 +8,7 @@ function BookPlate(){
    
     <>
 
-    <img src={b1} className="w-90 h-140 border-4 rounded-2xl shadow-lg/100"></img>
+    <img src={b1} className="w-90 h-140 border-1 rounded-2xl shadow-lg/100"></img>
     
     </>)
 }
