@@ -8,8 +8,7 @@ let url = 'https://openlibrary.org/search.json'
 async function fetchAllBooks(){
     
     let response = await fetch(url)
-    let data =  await response.json
-
+    let data =  await response.json()
 
     console.log("function ran!")
     console.log(await data)
