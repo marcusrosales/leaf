@@ -28,7 +28,7 @@ function Home() {
           
       </div> {/* <-- this was also missing */}
           
-          <div className=" ml-300">
+          <div className=" ml-220 -mt-80">
           <VerticalSlider />
           </div>
       
