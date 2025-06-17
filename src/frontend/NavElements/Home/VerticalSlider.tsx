@@ -15,13 +15,11 @@ function BookPlate(){
 
 
 function VerticalSlider(){
-        
     return(
         <>
             <BookPlate />
         </>
     )
 }
-
 
 export default VerticalSlider;
