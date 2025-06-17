@@ -2,4 +2,5 @@
 
 
 // Setup for inital API calling
-let url = null
+let url = 'https://openlibrary.org/search.json
+
