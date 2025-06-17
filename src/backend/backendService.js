@@ -7,9 +7,6 @@ let url = 'https://openlibrary.org/search.json?q=harry+potter&limit=1'
 
 
 
-
-
-
 // Function that handles the api call and returns result 
 async function fetchAllBooks(){
     
