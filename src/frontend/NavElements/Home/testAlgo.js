@@ -5,24 +5,15 @@
 
 
 
-let totalArray = ['harry potter','hobbit','steve jobs']
 
 let recents = []
 
 
-
-function reverse(){
-    for (let i = totalArray.length - 1; i >= 0; i--){
-        recents.push(totalArray[i])
-    }
-}
+let ApiTest = { vehicle:"Car", 
+                    wheelCount:'Four', 
+                    brandName:'Dodge',
+        }
 
 
-
-console.log("code ran")
-
-reverse()
-
-console.log(recents)
 
 
