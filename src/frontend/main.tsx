@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client'
 
 import Home from './NavElements/Home/Home.tsx'
 import Shelf from './NavElements/Shelf.tsx'
-import Market from './NavElements/Market.tsx'
+import Market from './NavElements/Market/Market.tsx'
 
 import NotFoundPage from './NavElements/NotFoundPage.tsx'
 

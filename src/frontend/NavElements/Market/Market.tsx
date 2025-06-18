@@ -1,7 +1,22 @@
-import NavBar from "./NavBar"
-
+import NavBar from "../NavBar"
 import { useState } from "react"
 
+
+
+
+function MrktBookCard(){
+
+  return(<>
+  
+  <div>
+    
+    <img></img>
+    <h1>Book Name</h1>
+  </div>
+  
+  
+  </>)
+}
 
 
 
@@ -22,8 +37,6 @@ function Market() {
     testFetchBook(value)
   }
 
-
-
   return(
     <>
     <NavBar />
@@ -34,15 +47,12 @@ function Market() {
       ml-5"
      >my market</h1> 
 
-
       <div className=" flex mt-15 gap-3 ">
-
       <input placeholder="Enter Book Name" className="w-170 h-23 text-5xl/normal italic font-serif font-extralight border-4 rounded-3xl
         p-5"
-
         onChange={(e)=> 
-          setValue(e.target.value)
-        }></input>
+          setValue(e.target.value)}>
+          </input>
 
       <button className="w-50 h-23 text-5xl/normal italic font-serif font-extralight border-4 rounded-3xl bg-green-300
       text-shadow-lg/100 text-white border-black"
@@ -51,13 +61,16 @@ function Market() {
 
       >Search</button>
         </div>
-
-
-
       </div>
-      
-      <h1></h1>
+
+      <div>
+        <MrktBookCard />
+        </div>        
     </>)
     }
+
+
+
+
 
 export default Market
