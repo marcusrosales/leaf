@@ -9,21 +9,25 @@ import { useState } from "react"
 function Market() {
   let [value, setValue] = useState('')
   
+  async function testFetchBook(usersBookRequestARG:string){
+    let userBookRequest = usersBookRequestARG
+    let url = `https://openlibrary.org/search.json?q=${usersBookRequestARG}&limit=1`
 
-  async function clickFunc(){
-    fetch('http://localhost:3000/'),{
-      method:"POST"
-    }
-    console.log('test click')
+    let response = await fetch(url)
+    let data = await response.json()
+    console.log(data.docs[0])
+  }
+
+  async function clickFunc(value){
+    console.log("code ran")
+    testFetchBook(value)
 
   }
 
-  
 
   return(
     
     <>
-    
     <NavBar />
 
       <div className="flex gap-50">
@@ -49,7 +53,7 @@ function Market() {
       <button className="w-50 h-23 text-5xl/normal italic font-serif font-extralight border-4 rounded-3xl bg-green-300
       text-shadow-lg/100 text-white border-black"
 
-      onClick={clickFunc}
+      onClick={()=>{clickFunc(value)}}
       >Search</button>
 
         </div>
