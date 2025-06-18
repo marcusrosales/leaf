@@ -11,7 +11,7 @@ function Market() {
   
 
   function clickFunc(){
-    console.log(value)
+    return value
   }
 
 
@@ -29,13 +29,13 @@ function Market() {
       <div className=" flex mt-15 gap-3 ">
 
 
+
       <input placeholder="Enter Book Name" className="w-170 h-23 text-5xl/normal italic font-serif font-extralight border-4 rounded-3xl
         p-5"
 
         onChange={(e)=> 
           setValue(e.target.value)
         }></input>
-
 
 
 
