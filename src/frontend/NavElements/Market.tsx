@@ -11,7 +11,7 @@ function Market() {
   
 
   async function clickFunc(){
-    
+    let serverResponse = await fetch('http://localhost:3000/')
     console.log('test click')
 
   }
