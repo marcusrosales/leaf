@@ -4,38 +4,47 @@ import { useState } from "react"
 
 
 
-function MrktBookCard(){
+function MrktBookCard({bookData}){
+  if (!bookData) return null;
+
+
+  let coverID = bookData.cover_i
+  let coverURL = coverID ? `https://covers.openlibrary.org/b/id/${coverID}-M.jpg`: ''
+
 
   return(<>
+
   
   <div>
-    
-    <img></img>
-    <h1>Book Name</h1>
+    {coverURL && <img src={coverURL} alt={bookData.title}/>}
+    <h1 className="text-4xl text-black">{bookData.title}</h1>
   </div>
-  
   
   </>)
 }
 
-
-
 function Market() {
-  let [value, setValue] = useState('')
+
+  let [value, setValue] = useState(null)
+  let [bookData,setBookData] = useState(null)
   
+
   async function testFetchBook(usersBookRequestARG:string){
     let userBookRequest = usersBookRequestARG
     let url = `https://openlibrary.org/search.json?q=${usersBookRequestARG}&limit=1`
 
     let response = await fetch(url)
     let data = await response.json()
-    console.log(data.docs[0])
+    setBookData(data.docs[0]);
+
   }
 
   async function clickFunc(value){
     console.log("code ran")
     testFetchBook(value)
   }
+
+
 
   return(
     <>
@@ -50,7 +59,7 @@ function Market() {
       <div className=" flex mt-15 gap-3 ">
       <input placeholder="Enter Book Name" className="w-170 h-23 text-5xl/normal italic font-serif font-extralight border-4 rounded-3xl
         p-5"
-        onChange={(e)=> 
+        onChange={(e)=>
           setValue(e.target.value)}>
           </input>
 
@@ -63,8 +72,8 @@ function Market() {
         </div>
       </div>
 
-      <div>
-        <MrktBookCard />
+        <div>
+        <MrktBookCard bookData={bookData} />
         </div>        
     </>)
     }
