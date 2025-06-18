@@ -11,7 +11,9 @@ function Market() {
   
 
   async function clickFunc(){
-    let serverResponse = await fetch('http://localhost:3000/')
+    fetch('http://localhost:3000/'),{
+      method:"POST"
+    }
     console.log('test click')
 
   }
@@ -55,9 +57,5 @@ function Market() {
 
     </>)
     }
-
-
-
-
 
 export default Market
