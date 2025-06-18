@@ -3,29 +3,33 @@ import NavBar from "./NavBar"
 import { useState } from "react"
 
 
+import { fetchAllBooks } from "../backend/backendService";
+
 
 
 function Market() {
   let [value, setValue] = useState('')
   
 
-  function clickFunc(){
-    console.log(value)
+  async function clickFunc(){
+    let Retdata = fetchAllBooks(value)
+    console.log(Retdata)
   }
 
-  }
-
+  
 
   return(
+    
     <>
+    
     <NavBar />
 
       <div className="flex gap-50">
     
-    <h1 className="text-9xl/normal italic font-serif font-extrabold
+      <h1 className="text-9xl/normal italic font-serif font-extrabold
       text-shadow-lg/100  text-shadow-green-900
       ml-5"
-    >my market</h1> 
+     >my market</h1> 
 
       <div className=" flex mt-15 gap-3 ">
 
@@ -46,13 +50,14 @@ function Market() {
       onClick={clickFunc}
       >Search</button>
 
-
-
-
         </div>
       </div>
 
     </>)
-}
+    }
+
+
+
+
 
 export default Market

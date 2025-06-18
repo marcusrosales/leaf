@@ -1,18 +1,26 @@
-// Setup for inital API 
+// Setup for Backend
 
-let url = 'https://openlibrary.org/search.json?q=harry+potter&limit=1'
+
+
+
+
+
+import express from 'express';
+let app = express();
+
+
 
 
 // Function that handles the api call and returns result 
-async function fetchAllBooks(){
+export async function fetchAllBooks(usersBookRequestARG){
     
+    let userBookRequest = usersBookRequestARG
+    let url = `https://openlibrary.org/search.json?q=${usersBookRequestARG}&limit=1`
+
+
     let response = await fetch(url)
     let data =  await response.json()
 
-    console.log("function ran!")
-    console.log(await data)
+    return(await data)
 }
 
-
-
-fetchAllBooks()
