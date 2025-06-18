@@ -9,6 +9,12 @@ function Market() {
     
   let [value, setValue] = useState('')
   
+
+  function clickFunc(){
+    console.log(value)
+  }
+
+
   return(
     <>
     <NavBar />
@@ -25,22 +31,25 @@ function Market() {
 
       <input placeholder="Enter Book Name" className="w-170 h-23 text-5xl/normal italic font-serif font-extralight border-4 rounded-3xl
         p-5"
+
         onChange={(e)=> 
           setValue(e.target.value)
-          
-        }
-      ></input>
+        }></input>
+
+
+
 
 
       <button className="w-50 h-23 text-5xl/normal italic font-serif font-extralight border-4 rounded-3xl bg-green-300
       text-shadow-lg/100 text-white border-black"
-      onClick={()=>
-        console.log(value)
-      }
+
+      onClick={clickFunc}
       >Search</button>
 
-      </div>
 
+
+
+        </div>
       </div>
 
     </>)
