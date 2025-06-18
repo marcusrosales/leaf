@@ -11,16 +11,13 @@ app.use(express.json());
 
 
 app.post('/', async (req,res)=>{
-    const data = await fetchAllBooks()
+    const data = await fetchAllBooks(send)
     console.log("test") 
     res.send('hello',string)
 
 });
 
 
-app.get(3000,(req,res)=>{
-    
-});
 
 app.listen(3000,()=>{
     console.log("listening on port 3k")
