@@ -3,7 +3,6 @@ import NavBar from "./NavBar"
 import { useState } from "react"
 
 
-import { fetchAllBooks } from "../backend/backendService";
 
 
 
@@ -12,8 +11,9 @@ function Market() {
   
 
   async function clickFunc(){
-    let Retdata = fetchAllBooks(value)
-    console.log(Retdata)
+    
+    console.log('test click')
+
   }
 
   
