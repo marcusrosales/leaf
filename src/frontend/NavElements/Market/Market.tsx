@@ -15,11 +15,25 @@ function MrktBookCard({bookData}){
   return(<>
 
   
-  <div>
-    {coverURL && <img src={coverURL} alt={bookData.title}/>}
-    <h1 className="text-4xl text-black">{bookData.title}</h1>
+  <div className="flex gap-5 mt-15 m-5 border-5 p-5 w-136 rounded-4xl bg-lime-100">
+    
+    {coverURL && <img src={coverURL} alt={bookData.title}
+    className="border-2 rounded-lg size-95 w-55 h-90 shadow-2xl/100"/>}
+
+    <div className="flex-col gap-5" >
+      <h1 className="text-5xl italic font-serif 
+      text-shadow-lg/100  text-shadow-green-900 ">{bookData.title}</h1>
+      
+      <h1 className="mt-5 text-3xl italic font-serif 
+      text-shadow-lg/100  text-shadow-green-900">{bookData.author_name}</h1>
+
+      <button className="mt-5  border-3 rounded-xl text-white border-black font-bold italic h-12 w-50 bg-sky-400
+      shadow-lg/100 text-shadow-lg/100">Add To Shelf</button>
+    
+    
+    </div>
   </div>
-  
+
   </>)
 }
 
