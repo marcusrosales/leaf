@@ -14,7 +14,7 @@ function MrktBookCard({bookData}){
 
   return(<>
 
-  
+
   <div className="flex gap-5 mt-15 m-5 border-5 p-5 w-136 rounded-4xl bg-lime-100">
     
     {coverURL && <img src={coverURL} alt={bookData.title}
@@ -28,7 +28,9 @@ function MrktBookCard({bookData}){
       text-shadow-lg/100  text-shadow-green-900">{bookData.author_name}</h1>
 
       <button className="mt-5  border-3 rounded-xl text-white border-black font-bold italic h-12 w-50 bg-sky-400
-      shadow-lg/100 text-shadow-lg/100">Add To Shelf</button>
+      shadow-lg/100 text-shadow-lg/100"
+      onClick={()=> console.log('book added!')}
+      >Add To Shelf</button>
     
     
     </div>
@@ -86,8 +88,11 @@ function Market() {
         </div>
       </div>
 
-        <div>
+        <div >
         <MrktBookCard bookData={bookData} />
+        <MrktBookCard bookData={bookData} />
+        <MrktBookCard bookData={bookData} />
+        
         </div>        
     </>)
     }
