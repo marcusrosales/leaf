@@ -1,6 +1,5 @@
 import NavBar from "../NavBar";
 
-
 function Home() {
   return (
     <>
@@ -22,12 +21,10 @@ function Home() {
             <span className="text-8xl -ml-4">🍃</span>
           </h2>
 
-        </div> {/* <-- this was missing */}
+        </div> 
           
+      </div> 
           
-      </div> {/* <-- this was also missing */}
-          
-      
     </>
   );
 }
