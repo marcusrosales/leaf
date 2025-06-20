@@ -1,5 +1,4 @@
 import NavBar from "../NavBar";
-import VerticalSlider from "./VerticalSlider";
 
 
 function Home() {
@@ -28,9 +27,6 @@ function Home() {
           
       </div> {/* <-- this was also missing */}
           
-          <div className=" ml-330 -mt-80">
-          <VerticalSlider />
-          </div>
       
     </>
   );
