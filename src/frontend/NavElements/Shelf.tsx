@@ -15,7 +15,8 @@ function InventoryBookCard(){
 
 function Shelf(){
 
-  useEffect(()=>{InventoryBookCard},[localStorage.length])
+  let storageData = JSON.parse(localStorage.getItem('bookData'))  
+  console.log(storageData)
 
   return(
     <>
