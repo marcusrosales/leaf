@@ -2,17 +2,26 @@ import NavBar from "./NavBar";
 import { useEffect } from "react";
 
 
-function InventoryBookCard(){
 
+
+function InventoryBookCard(){
   return(<>
-  <h1>TESTING HERE!</h1>  
+  <h1>{localStorage.getItem('bookData')}</h1>  
   </>)
 }
 
+function bookCount(){
+  for(let i=0; i < localStorage.length ;i++){
+    console.log(i)
+  }
+  console.log(localStorage.length)
+}
 
 
 function Shelf(){
-    return(
+  bookCount()
+  console.log('test')
+  return(
     <>
     <NavBar />
     <h1 className="text-9xl/normal italic font-serif font-extrabold
