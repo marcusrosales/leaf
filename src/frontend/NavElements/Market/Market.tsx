@@ -27,8 +27,13 @@ function MrktBookCard({bookData}){
 
       <button className="mt-5  border-3 rounded-xl text-white border-black font-bold italic h-12 w-50 bg-sky-400
       shadow-lg/100 text-shadow-lg/100"
-      onClick={()=>{localStorage.setItem('stoedUserData','teststring')
+      onClick={()=>{
+        const savedUserBooks = JSON.parse(localStorage.getItem('bookData')) || [];
+        savedUserBooks.push([coverURL,bookData.title,bookData.author_name]);
+        localStorage.setItem('savedBook',JSON.stringify(savedUserBooks));
+        console.log('click went through!')
         console.log(localStorage)
+
       }}
       >Add To Shelf</button>
     
