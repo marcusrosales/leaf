@@ -2,11 +2,11 @@ import NavBar from "./NavBar";
 import { useState, useEffect } from "react";
 
 function InventoryBookCard({ book, onRemove }) {
-  
-  return (
-    <div className="flex flex-col justify-center items-center border-5 rounded-4xl w-60 m-5 ">
 
-      <h1 className="text-center text-3xl italic font-semibold text-shadow-lg/100 text-shadow-lime-800">
+  return (
+    <div className="flex flex-col justify-center items-center border-5 rounded-4xl w-60  m-5 ">
+
+      <h1 className="mt-2 text-center text-3xl italic font-semibold text-shadow-lg/100 text-shadow-lime-800">
         {book.title}
       </h1>
 
@@ -14,12 +14,12 @@ function InventoryBookCard({ book, onRemove }) {
         <img
           src={book.coverURL}
           alt={book.title}
-          className="w-40 h-60  border-2 rounded-lg shadow-lg/100"
+          className="w-40 h-60  border-2 rounded-lg shadow-lg/100 m-5"
         />
       )}
 
       <button
-        className="text-2xl text-shadow-lg/100 italic font-semibold bg-red-400 border-black rounded-4xl text-center border-3 w-30 text-white mt-3"
+        className="mb-3 text-2xl text-shadow-lg/100 italic font-semibold bg-red-400 border-black rounded-4xl text-center border-3 w-30 text-white mt-3"
         onClick={onRemove}
       >
         Remove
