@@ -27,14 +27,22 @@ function MrktBookCard({bookData}){
 
       <button className="mt-5  border-3 rounded-xl text-white border-black font-bold italic h-12 w-50 bg-sky-400
       shadow-lg/100 text-shadow-lg/100"
-      onClick={()=>{
-        const savedUserBooks = JSON.parse(localStorage.getItem('bookData')) || [];
-        savedUserBooks.push([coverURL,bookData.title,bookData.author_name]);
-        localStorage.setItem('savedBook',JSON.stringify(savedUserBooks));
-        console.log('click went through!')
-        console.log(localStorage)
+      onClick={() => {
+      // Get existing saved books or empty array
+      const savedBooks = JSON.parse(localStorage.getItem('bookData')) || [];
 
-      }}
+      // Add new book as an object
+      savedBooks.push({
+        coverURL: coverURL,
+        title: bookData.title,
+        author: bookData.author_name
+      });
+
+      // Save updated array back to localStorage
+      localStorage.setItem('bookData', JSON.stringify(savedBooks));
+
+      console.log('Book added:', savedBooks);
+    }}
       >Add To Shelf</button>
     
     </div>
