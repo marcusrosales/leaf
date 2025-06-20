@@ -5,22 +5,18 @@ import { useEffect } from "react";
 
 
 function InventoryBookCard(){
+  
   return(<>
-  <h1>{localStorage.getItem('bookData')}</h1>  
+  <h1>test</h1>  
   </>)
 }
 
-function bookCount(){
-  for(let i=0; i < localStorage.length ;i++){
-    console.log(i)
-  }
-  console.log(localStorage.length)
-}
 
 
 function Shelf(){
-  bookCount()
-  console.log('test')
+
+  useEffect(()=>{InventoryBookCard},[localStorage.length])
+
   return(
     <>
     <NavBar />
