@@ -1,11 +1,22 @@
 import NavBar from "./NavBar";
 import { useState, useEffect } from "react";
 
-function InventoryBookCard({ book, onRemove }) {
+// Define the shape of a Book
+type Book = {
+  title: string;
+  coverURL?: string;
+  author?: string[]; // optional
+};
 
+// Props for InventoryBookCard
+type InventoryBookCardProps = {
+  book: Book;
+  onRemove: () => void;
+};
+
+function InventoryBookCard({ book, onRemove }: InventoryBookCardProps) {
   return (
     <div className="flex flex-col justify-center items-center border-5 rounded-4xl w-60  m-5 ">
-
       <h1 className="mt-2 text-center text-3xl italic font-semibold text-shadow-lg/100 text-shadow-lime-800">
         {book.title}
       </h1>
@@ -29,14 +40,15 @@ function InventoryBookCard({ book, onRemove }) {
 }
 
 function Shelf() {
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
-    const storageData = JSON.parse(localStorage.getItem("bookData")) || [];
+    const storage = localStorage.getItem("bookData");
+    const storageData: Book[] = storage ? JSON.parse(storage) : [];
     setBooks(storageData);
   }, []);
 
-  function removeBook(index) {
+  function removeBook(index: number) {
     const updatedBooks = books.filter((_, i) => i !== index);
     setBooks(updatedBooks);
     localStorage.setItem("bookData", JSON.stringify(updatedBooks));
@@ -45,20 +57,14 @@ function Shelf() {
   return (
     <>
       <NavBar />
-      <h1
-        className="text-9xl italic font-serif font-extrabold
-        text-shadow-lg/100 text-shadow-green-900 ml-5"
-      >
+      <h1 className="text-9xl italic font-serif font-extrabold text-shadow-lg/100 text-shadow-green-900 ml-5">
         my shelf
       </h1>
+
       <div className="flex flex-wrap">
         {books.length === 0 && <p className="m-5 italic">Shelf is empty</p>}
         {books.map((book, idx) => (
-          <InventoryBookCard
-            key={idx}
-            book={book}
-            onRemove={() => removeBook(idx)}
-          />
+          <InventoryBookCard key={idx} book={book} onRemove={() => removeBook(idx)} />
         ))}
       </div>
     </>
