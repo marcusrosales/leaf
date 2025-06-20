@@ -5,7 +5,7 @@ import { useState } from "react"
 
 
 function MrktBookCard({bookData}){
-  if (!bookData) return null;
+  if (!bookData) return ;
 
   let coverID = bookData.cover_i
   let coverURL = coverID ? `https://covers.openlibrary.org/b/id/${coverID}-M.jpg`: ''
@@ -46,8 +46,8 @@ function MrktBookCard({bookData}){
 
 function Market() {
 
-  let [value, setValue] = useState(null)
-  let [bookData,setBookData] = useState(null)
+  let [value, setValue] = useState()
+  let [bookData,setBookData] = useState()
 
   async function testFetchBook(usersBookRequestARG:string){
     let userBookRequest = usersBookRequestARG
