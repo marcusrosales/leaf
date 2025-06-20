@@ -8,9 +8,17 @@ function InventoryBookCard(){
   
   return(<>
   
-  <h1 className="text-5xl italic font-semibold"
-  >test</h1>  
   
+  
+  <div className="flex flex-col justify-center items-center border-5 rounded-4xl w-60 m-5 ">
+  
+  <h1 className=" text-center text-3xl italic font-semibold text-shadow-lg/100 text-shadow-lime-800"
+  >Harry Potter</h1>  
+
+
+  <button className="text-2xl italic font-semibold border-black rounded-3xl text-center border-3 w-25 h-10">Remove</button>
+
+  </div>
 
   </>)
 }
