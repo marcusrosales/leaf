@@ -10,7 +10,7 @@ function MrktBookCard({bookData}){
   let coverID = bookData.cover_i
   let coverURL = coverID ? `https://covers.openlibrary.org/b/id/${coverID}-M.jpg`: ''
 
-  
+
   return(<>
 
   <div className="flex gap-5 mt-15 m-5 border-5 p-5 w-136 rounded-4xl bg-lime-100">
@@ -27,7 +27,9 @@ function MrktBookCard({bookData}){
 
       <button className="mt-5  border-3 rounded-xl text-white border-black font-bold italic h-12 w-50 bg-sky-400
       shadow-lg/100 text-shadow-lg/100"
-      onClick={()=> console.log('book added!')}
+      onClick={()=>{localStorage.setItem('stoedUserData','teststring')
+        console.log(localStorage)
+      }}
       >Add To Shelf</button>
     
     </div>

@@ -3,7 +3,10 @@ import NavBar from "./NavBar";
 
 
 function InventoryBookCard(){
+
+
   return(<>
+  <h1>TESTING HERE!</h1>  
   </>)
 }
 
@@ -17,6 +20,7 @@ function Shelf(){
       text-shadow-lg/100  text-shadow-green-900
       ml-5"
     >my shelf</h1>
+    <InventoryBookCard />
 
     <div>
       
